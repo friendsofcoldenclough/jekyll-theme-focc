@@ -1,0 +1,20 @@
+main:
+  - title: Home
+    url: "/"
+    section: home
+  - title: Events
+    url: "/events/"
+    section: events
+  - title: Nature
+    url: "/nature/"
+    section: nature
+  - title: History
+    url: "/history/"
+    section: history
+  - title: About Us
+    url: "/about/"
+    section: about
+footer:
+  - title: "Friends of Colden Clough Facebook Page"
+    url: "https://www.facebook.com/groups/3797294470486573/"
+    section: facebook

@@ -1,0 +1,16 @@
+
+        <header class="top-bar">
+            <div class="top-bar-container">
+                <h1 class="site-title"><a href="{{ site.url }}"><img src="{{ site.url }}/assets/logo/fofcc.png" alt="{{ site.title }}"><span class="site-title-text">{{ site.title }}</span></a></h1>
+                <nav>
+                    <input type="checkbox" id="button">
+                    <label for="button" onclick>Menu</label>
+                    <ul>
+                        {% for link in site.data.navigation.main %}
+                        <li{% if link.section == page.section %} class="active"{% elsif link.section == "events" and page.layout == 'post' %} class="active"{% endif %}><a href="{{ site.url }}{{ link.url }}"{% if link.url contains 'http' %} target="_blank"{% endif %}>{{ link.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
