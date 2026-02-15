@@ -69,3 +69,11 @@ exclude:
 - LICENSE
 - README.md
 - CNAME
+include:
+- apple-touch-icon.png
+- favicon.ico
+- icon-192.png
+- icon-512.png
+- icon-mask.png
+- icon.svg
+- manifest.webmanifest
