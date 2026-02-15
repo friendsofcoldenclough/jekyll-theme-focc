@@ -12,10 +12,10 @@
         <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}" integrity="{{ site.data.integrity['style'] }}" crossorigin="anonymous">
         {% endif %}
         {% if site.google_author %}<link rel="author" href="{{ site.google_author }}"/>{% endif %}
-        <link rel="manifest" href="/manifest.webmanifest">
-        <link rel="icon" href="/favicon.ico" sizes="32x32">
-        <link rel="icon" href="/icon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link rel="manifest" href="{{ '/manifest.webmanifest' | absolute_url }}">
+        <link rel="icon" href="{{ '/favicon.ico' | absolute_url }}" sizes="32x32">
+        <link rel="icon" href="{{ '/icon.svg' | absolute_url }}" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | absolute_url }}">
         <!-- Facebook Optimization -->
         <meta property="og:locale" content="{% if site.og_locale == nil %}en_EN{% else %}{{ site.og_locale }}{% endif %}" />
         {% if site.og_type %}<meta property="og:type" content="website" />{% endif %}
