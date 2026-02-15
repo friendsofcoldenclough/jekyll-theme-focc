@@ -1,25 +1,21 @@
 {
-  "name": "focc",
+  "name": "jekyll-theme-focc",
   "version": "0.0.1",
-  "description": "Jekyll site for Friends of Colden Clough",
+  "description": "Jekyll theme for Friends of Colden Clough",
   "main": "index.js",
   "scripts": {
-    "compile": "node _scripts/minify.js",
-    "convert": "node _scripts/convert.js"
+    "compile": "node _scripts/minify.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bjorsq/focc.git"
+    "url": "https://github.com/friendsofcoldenclough/jekyll-theme-focc.git"
   },
   "author": "Peter Edwards <pete@bjorsq.net>",
   "license": "UNLICENSE",
   "devDependencies": {
-    "fast-xml-parser": "^5.3.5",
-    "node-html-markdown": "^2.0.0",
+    "get-sri": "^1.0.2",
     "sass": "^1.97.3",
     "uglify-js": "^3.19.3",
-    "webpack": "^5.105.1",
-    "webpack-cli": "^6.0.1",
     "yaml": "^2.8.2"
   }
 }
