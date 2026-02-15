@@ -37,7 +37,7 @@ imgpath: "/assets/images/"
 
 # Theme works best with Kramdown (using the table of contents function)
 markdown: kramdown
-permalink: /:categories/:title/
+permalink: /:categories/:year/:month/:day/:title:output_ext
 highlight: pygments
 excerpt_separator: <!--more-->
 future: true
@@ -69,11 +69,3 @@ exclude:
 - LICENSE
 - README.md
 - CNAME
-include:
-- apple-touch-icon.png
-- favicon.ico
-- icon-192.png
-- icon-512.png
-- icon-mask.png
-- icon.svg
-- manifest.webmanifest
