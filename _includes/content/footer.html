@@ -1,16 +1,15 @@
         <footer>
             <div class="container">
-                <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+                <p>&copy; {{ site.time | date: "%Y" }} Friends of Colden Clough</p>
                 <nav>
                     <ul>
-                        <li><a href="/contact/">Contact Us</a></li>
-                        <li><a href="/privacy/">Privacy Policy</a></li>
-                        <li><a href="/about/">About Us</a></li>
+                        <li><a href="https://friendsofcoldenclough.org.uk/contact/">Contact Us</a></li>
+                        <li><a href="https://friendsofcoldenclough.org.uk/privacy/">Privacy Policy</a></li>
+                        <li><a href="https://friendsofcoldenclough.org.uk/about/">About Us</a></li>
                     </ul>
                 </nav>
-                {% if site.facebook %}
                 <div class="social">
-                    <a href="{{ site.facebook }}" target="_blank" title="Facebook page for {{ site.title }}">
+                    <a href="https://www.facebook.com/groups/3797294470486573/" target="_blank" title="Facebook page for the Friends of Colden Clough">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.333 95.333" xml:space="preserve">
                             <g>
                                 <path d="M93.333,0H2C0.896,0,0,0.896,0,2v91.332c0,1.104,0.896,2,2,2h48.525V63.477H40.284c-0.885,0-1.602-0.717-1.602-1.602
@@ -22,11 +21,7 @@
                         </svg>
                     </a>
                 </div>
-                {% endif %}
             </div>
         </footer>
-        {% if jekyll.environment == "production" %}
-        <script src="{{ '/assets/js/script.min.js' | relative_url }}" integrity="{{ site.data.integrity['script.min'] }}" crossorigin="anonymous"></script>
-        {% else %}
-        <script src="{{ '/assets/js/script.js' | relative_url }}" integrity="{{ site.data.integrity['script'] }}" crossorigin="anonymous"></script>
-        {% endif %}
+        <script src="https://cdn.jsdelivr.net/gh/tofsjonas/sortable@4.1.7/dist/sortable.min.js" integrity="sha384-KJBzhWbOFhju6N4Bbl034ASSL8K5GirZoHBt0hZTiPcEKUUmzt5N2TIyg7bu5/AF" crossorigin="anonymous"></script>
+        {% include footer-extras.html %}
