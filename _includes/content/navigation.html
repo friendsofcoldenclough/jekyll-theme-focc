@@ -1,12 +1,12 @@
 
         <header class="top-bar">
             <div class="top-bar-container">
-                <h1 class="site-title"><a href="/"><img src="https://friendsofcoldenclough.org.uk/assets/logo/fofcc.png" alt="Friends of Colden Clough"><span class="site-title-text">Friends of Colden Clough</span></a></h1>
+                <h1 class="site-title"><a href="https://friendsofcoldenclough.org.uk/"><img src="https://friendsofcoldenclough.org.uk/assets/logo/fofcc.png" alt="Friends of Colden Clough"><span class="site-title-text">Friends of Colden Clough</span></a></h1>
                 <nav>
                     <input type="checkbox" id="button">
                     <label for="button" onclick>Menu</label>
                     <ul>
-                        <li{% if page.permalink == '/' %} class="active"{% endif %}>
+                        <li{% if page.section == 'home' %} class="active"{% endif %}>
                             <a href="/">Home</a>
                         </li>
                         <li{% if page.section == 'events' %} class="active"{% endif %}>
