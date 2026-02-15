@@ -790,12 +790,6 @@ header figure.featuredimage img {
   clear: both;
 }
 
-#map {
-  width: 100%;
-  height: 50rem;
-  margin-bottom: 1.5rem;
-}
-
 .sortable thead th:not(.no-sort) {
   cursor: pointer;
 }
