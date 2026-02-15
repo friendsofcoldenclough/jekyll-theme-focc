@@ -3,9 +3,9 @@
                 <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
                 <nav>
                     <ul>
-                        <li><a href="{% link pages/contact.md %}">Contact Us</a></li>
-                        <li><a href="{% link pages/privacy.md %}">Privacy Policy</a></li>
-                        <li><a href="{% link pages/about.md %}">About Us</a></li>
+                        <li><a href="/contact/">Contact Us</a></li>
+                        <li><a href="/privacy/">Privacy Policy</a></li>
+                        <li><a href="/about/">About Us</a></li>
                     </ul>
                 </nav>
                 {% if site.facebook %}
@@ -25,10 +25,8 @@
                 {% endif %}
             </div>
         </footer>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
         {% if jekyll.environment == "production" %}
-        <script src="{{ site.url }}/assets/js/script.min.js"></script>
+        <script src="/assets/js/script.min.js"></script>
         {% else %}
-        <script src="{{ site.url }}/assets/js/script.js"></script>
+        <script src="/assets/js/script.js"></script>
         {% endif %}
-        <script src="https://cdn.jsdelivr.net/gh/tofsjonas/sortable@4.1.7/dist/sortable.min.js" integrity="sha384-KJBzhWbOFhju6N4Bbl034ASSL8K5GirZoHBt0hZTiPcEKUUmzt5N2TIyg7bu5/AF" crossorigin="anonymous"></script>
