@@ -10,5 +10,9 @@ remote_theme: friendsofcoldenclough/jekyll-theme-focc
 
 This theme has hard-coded elements in some templates, so all sites will have the same navigation elements in the header and footer. Some content, such as icons and manifests, are also hard-coded to point to the organisation pages site content.
 
+## Using the theme on a pages site for an organisation repository
+
+
+
 
 
