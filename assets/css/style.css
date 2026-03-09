@@ -779,6 +779,20 @@ header figure.featuredimage img {
   height: auto;
 }
 
+figure.inlineimage {
+  margin: 0 0 1rem 0;
+  max-width: 100%;
+}
+figure.inlineimage img {
+  width: 100%;
+  height: auto;
+}
+figure.inlineimage figcaption {
+  font-style: italic;
+  text-align: right;
+  margin: 0 0 1rem 0;
+}
+
 .snippet figure {
   margin: 0 0 1rem 1rem;
   max-width: 50%;
