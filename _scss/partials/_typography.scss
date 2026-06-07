@@ -25,4 +25,8 @@ blockquote {
     border-radius: 1rem;
     padding: 1rem;
     margin: 1em auto;
+    h3 {
+        color: var(--snippet-heading-color);
+        margin-top: 0;
+    }
 }

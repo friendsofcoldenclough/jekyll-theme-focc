@@ -21,6 +21,7 @@
   --pagination-color-disabled: #ccc;
   --blockquote-border-colour: rgba(58, 170, 47, 0.1);
   --snippet-border-color: #1c7e10;
+  --snippet-heading-color: #15570c;
   --stripe-bg: #e4e4e4;
   --stripe-color: #000;
   --stripe-bg-odd: #fff;
@@ -503,6 +504,10 @@ blockquote cite {
   border-radius: 1rem;
   padding: 1rem;
   margin: 1em auto;
+}
+.snippet h3 {
+  color: var(--snippet-heading-color);
+  margin-top: 0;
 }
 
 .top-bar {

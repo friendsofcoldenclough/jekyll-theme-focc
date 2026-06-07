@@ -16,9 +16,9 @@ layout: default
 			{{ content }}
 
 			{% if page.includesnippet %}
-			<div class="snippet">
+			<aside role="complimentary" class="snippet">
 			{% include snippets/{{ page.includesnippet }}.html %}
-			</div>
+			</aside>
 			{% endif %}
 
 			{% if post.tags %}
