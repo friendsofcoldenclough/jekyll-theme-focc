@@ -3,17 +3,17 @@ layout: page
 ---
 
 <h2>Upcoming Events</h2>
-{% assign curDate = site.time | date: '%s' %}
+{% assign curDate = site.time | date: '%Y%m%d' | plus: 0 %}
 {% for post in site.posts reversed%}
-    {% assign postStartDate = post.date | date: '%s' %}
+    {% assign postStartDate = post.date | date: '%Y%m%d' | plus: 0 %}
     {% if postStartDate >= curDate %}
         {% include post-list.html post=post %}
     {% endif %}
 {% endfor %}
 <h2>Past Events</h2>
 {% for post in site.posts %}
-    {% assign postStartDate = post.date | date: '%s' %}
-    {% if postStartDate <= curDate %}
+    {% assign postStartDate = post.date | date: '%Y%m%d' | plus: 0 %}
+    {% if postStartDate < curDate %}
         {% include post-list.html post=post %}
     {% endif %}
 {% endfor %}
