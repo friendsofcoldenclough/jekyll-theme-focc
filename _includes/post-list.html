@@ -2,8 +2,13 @@
     {% if post.featuredimage %}
     <figure>
         <a href="{{ post.url }}">
-            <img src="{{ site.url}}{{ site.imgpath }}{{ post.featuredimage }}" alt="{{ post.title | escape }} featured image">
+            <img src="{{ site.url}}{{ site.imgpath }}{{ post.featuredimage }}" alt="{% if post.featuredimage_alt %}{{ post.featuredimage_alt | escape }}{% else %}{{ post.title | escape }} featured image{% endif %}">
         </a>
+        {% if post.featuredimage_caption %}
+        <figcaption>
+            <p>{{ post.featuredimage_caption }}</p>
+        </figcaption>
+        {% endif %}
     </figure>
     {% endif %}
     <div class="post-list-item-content">
