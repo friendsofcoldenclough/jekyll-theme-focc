@@ -1,0 +1,10 @@
+---
+---
+{
+  "name": "{{ site.title }}",
+  "icons": [
+    { "src": "{{ site.url }}{{ site.baseurl }}/assets/icon/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "{{ site.url }}{{ site.baseurl }}/assets/icon/icon-mask.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" },
+    { "src": "{{ site.url }}{{ site.baseurl }}/assets/icon/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}
