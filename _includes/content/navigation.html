@@ -1,4 +1,5 @@
-
+{% assign navitems = site.data.navigation.mainmenu.items %}
+{% assign homeurl = site.data.navigation.mainmenu.homeurl %}
         <header class="top-bar">
             <div class="top-bar-container">
                 <h1 class="site-title"><a href="https://friendsofcoldenclough.org.uk/"><img src="https://friendsofcoldenclough.org.uk/assets/logo/fofcc.png" alt="Friends of Colden Clough"><span class="site-title-text">Friends of Colden Clough</span></a></h1>
@@ -6,21 +7,20 @@
                     <input type="checkbox" id="button">
                     <label for="button" onclick>Menu</label>
                     <ul>
+                        {% if homeurl %}
                         <li{% if page.section == 'home' %} class="active"{% endif %}>
-                            <a href="https://friendsofcoldenclough.org.uk/">Home</a>
+                            <a href="{{ homeurl }}">Home</a>
                         </li>
-                        <li{% if page.section == 'events' %} class="active"{% endif %}>
-                            <a href="https://friendsofcoldenclough.org.uk/events/">Events</a>
+                        {% else %}
+                        <li{% if page.section == 'home' %} class="active"{% endif %}>
+                            <a href="{{ site.url }}{{ site.baseurl }}">Home</a>
                         </li>
-                        <li{% if page.section == 'nature' %} class="active"{% endif %}>
-                            <a href="https://friendsofcoldenclough.org.uk/nature/">Nature</a>
+                        {% endif %}
+                            {% for navitem in navitems.items %}
+                        <li{% if page.section == navitem.section %} class="active"{% endif %}>
+                            <a href="{{ site.url }}{{ site.baseurl }}{{ navitem.url }}">{{ navitem.title }}</a>
                         </li>
-                        <li{% if page.section == 'history' %} class="active"{% endif %}>
-                            <a href="https://friendsofcoldenclough.org.uk/history/">History</a>
-                        </li>
-                        <li{% if page.section == 'about' %} class="active"{% endif %}>
-                            <a href="https://friendsofcoldenclough.org.uk/about/">About Us</a>
-                        </li>
+                            {% endfor %}
                     </ul>
                 </nav>
             </div>
