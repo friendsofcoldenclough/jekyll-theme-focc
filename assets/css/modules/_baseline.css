@@ -1,0 +1,87 @@
+/* modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+*,::after,::before{box-sizing:border-box}html{font-family:system-ui,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';line-height:1.15;-webkit-text-size-adjust:100%;tab-size:4}body{margin:0}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-color:currentcolor}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}legend{padding:0}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}
+
+/*
+ * baseline styles
+ */
+body {
+	font-size: 100%;
+	background: var(--background-color);
+	color: var(--text-color);
+	font-family: "Open Sans", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 150%;
+	position: relative;
+}
+a {
+    color: var(--link-colour);
+    &:hover, &:active {
+        color: var(--hover-colour);
+    }
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url('../../font/OpenSans.woff') format('woff'),
+         url('../../font/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/**
+ * tables
+ */
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 1.5rem 0;
+	border-spacing: 0;
+	border: 1px solid var(--table-border);
+	th, td {
+		border: 1px solid var(--table-border);
+		padding: 0.5rem;
+	}
+	&.sticky thead th {
+		position: sticky;
+		top: 0;
+		z-index: 1;
+	}
+	tbody {
+		tr {
+			background-color: var(--stripe-bg);
+			color: var(--stripe-color);
+			&:nth-child(odd) {
+				background-color: var(--stripe-bg-odd);
+				color: var(--stripe-color-odd);
+			}
+		}
+	}
+	thead {
+		th {
+			background: var(--th-bg);
+			color: var(--th-color);
+			font-weight: normal;
+			text-align: left;
+			text-transform: capitalize;
+			vertical-align: baseline;
+			white-space: nowrap;
+		}
+	}
+}
+blockquote {
+    border-left: 1rem solid var(--blockquote-border-colour);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    color: var(--blockquote-text-colour);
+    font-style: italic;
+    cite {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        font-style: normal;
+        text-align: right
+    }
+}
