@@ -37,6 +37,7 @@
     --background-color: #222;
     --text-color: #fff;
     --link-colour: #a3ff91;
+    --hover-colour: #fff;
     --stripe-bg: #222;
     --stripe-color: #fff;
     --stripe-bg-odd: #333;
@@ -50,6 +51,7 @@
   --background-color: #222;
   --text-color: #fff;
   --link-colour: #a3ff91;
+  --hover-colour: #fff;
   --stripe-bg: #222;
   --stripe-color: #fff;
   --stripe-bg-odd: #333;
@@ -475,6 +477,11 @@ footer {
 footer .container {
   max-width: var(--max-content-width);
   margin: 0 auto;
+}
+
+iframe {
+  border: none;
+  margin: 1em 0;
 }
 
 @font-face {
