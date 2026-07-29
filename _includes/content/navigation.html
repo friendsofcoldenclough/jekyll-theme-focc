@@ -27,7 +27,7 @@
                         {% endif %}
                             {% for navitem in navitems %}
                         <li{% if page.section == navitem.section %} class="active"{% endif %}>
-                            <a href="{{ site.url }}{{ site.baseurl }}{{ navitem.url }}">{{ navitem.title }}</a>
+                            <a href="{{ navitem.url }}">{{ navitem.title }}</a>
                         </li>
                             {% endfor %}
                     </ul>
