@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
         {% if page.description %}<meta name="description" content="{{ page.description | strip_html | escape }}"/>{% elsif site.description %}<meta name="description" content="{{ site.description | strip_html | escape }}"/>{% endif %}
-        <link rel="stylesheet" href="https://friendsofcoldenclough.org.uk/assets/css/main.css">
+        <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/main.css">
         {% if site.google_author %}<link rel="author" href="{{ site.google_author }}"/>{% endif %}
-        <link rel="manifest" href="https://friendsofcoldenclough.org.uk/manifest.webmanifest">
-        <link rel="icon" href="https://friendsofcoldenclough.org.uk/favicon.ico" sizes="32x32">
-        <link rel="icon" href="https://friendsofcoldenclough.org.uk/icon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="https://friendsofcoldenclough.org.uk/apple-touch-icon.png">
+        <link rel="manifest" href="{{ site.url }}{{ site.baseurl }}/manifest.webmanifest">
+        <link rel="icon" href="{{ site.url }}{{ site.baseurl }}/favicon.ico" sizes="32x32">
+        <link rel="icon" href="{{ site.url }}{{ site.baseurl }}/icon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="{{ site.url }}{{ site.baseurl }}/apple-touch-icon.png">
         <!-- Facebook Optimization -->
         <meta property="og:locale" content="{% if site.og_locale == nil %}en_EN{% else %}{{ site.og_locale }}{% endif %}" />
         {% if site.og_type %}<meta property="og:type" content="website" />{% endif %}
