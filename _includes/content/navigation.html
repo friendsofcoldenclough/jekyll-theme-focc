@@ -1,8 +1,21 @@
 {% assign navitems = site.data.navigation.mainmenu.items %}
-{% assign homeurl = site.data.navigation.mainmenu.homeurl %}
+{% assign home = site.data.navigation.mainmenu.home %}
+{% if home.url %}
+    {% assign homeurl = home.url %}
+{% else %}
+    {% capture homeurl %}{{ site.url }}{{ site.baseurl }}{% endcapture %}
+{% endif %}
+{% if home.title %}
+    {% assign sitetitle = home.title %}
+{% else %}
+    {% assign sitetitle = site.title %}
+{% endif %}
+{% if home.logo %}
+    {% assign logourl = home.logo %}
+{% endif %}
         <header class="top-bar">
             <div class="top-bar-container">
-                <h1 class="site-title"><a href="https://friendsofcoldenclough.org.uk/"><img src="https://friendsofcoldenclough.org.uk/assets/logo/fofcc.png" alt="Friends of Colden Clough"><span class="site-title-text">Friends of Colden Clough</span></a></h1>
+                <h1 class="site-title">{% if homeurl %}<a href="{{ homeurl }}">{% endif %}{% if logourl %}<img src="{{ logourl }}" alt="{{ sitetitle }}">{% endif %}<span class="site-title-text">{{ sitetitle }}</span>{% if homeurl %}</a>{% endif %}</h1>
                 <nav>
                     <input type="checkbox" id="button">
                     <label for="button" onclick>Menu</label>
@@ -10,10 +23,6 @@
                         {% if homeurl %}
                         <li{% if page.section == 'home' %} class="active"{% endif %}>
                             <a href="{{ homeurl }}">Home</a>
-                        </li>
-                        {% else %}
-                        <li{% if page.section == 'home' %} class="active"{% endif %}>
-                            <a href="{{ site.url }}{{ site.baseurl }}">Home</a>
                         </li>
                         {% endif %}
                             {% for navitem in navitems.items %}

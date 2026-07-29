@@ -1,15 +1,9 @@
-mainmenu:
-  homeurl: "https://friendsofcoldenclough.org.uk/"
-  items:
-    - title: "Events"
-      section: "events"
-      url: "/events/"
-    - title: "Nature"
-      section: "nature"
-      url: "/nature/"
-    - title: "History"
-      section: "history" 
-      url: "/history/"
-    - title: "About Us"
-      section: "about"
-      url: "/about/"
+# mainmenu:
+#   home:
+#       url: ""
+#       title: ""
+#       logo: ""
+#   items:
+#     - title: ""
+#       section: ""
+#       url: ""
